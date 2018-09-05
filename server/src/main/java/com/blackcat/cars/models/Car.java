@@ -5,4 +5,36 @@ public class Car {
     private int numDoors;
     private String brand;
     private String model;
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public int getNumDoors() {
+        return numDoors;
+    }
+
+    public void setNumDoors(int numDoors) {
+        this.numDoors = numDoors;
+    }
+
+    public String getBrand() {
+        return brand;
+    }
+
+    public void setBrand(String brand) {
+        this.brand = brand;
+    }
+
+    public String getModel() {
+        return model;
+    }
+
+    public void setModel(String model) {
+        this.model = model;
+    }
 }
