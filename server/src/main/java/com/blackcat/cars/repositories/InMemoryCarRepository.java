@@ -23,7 +23,7 @@ public class InMemoryCarRepository implements CarRepository {
 
     @Override
     public Car getCarById(int id) {
-        return null;
+        return getCar(id);
     }
 
     @Override
