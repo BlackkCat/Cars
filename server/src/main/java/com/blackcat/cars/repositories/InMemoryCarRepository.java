@@ -35,7 +35,8 @@ public class InMemoryCarRepository implements CarRepository {
 
     @Override
     public void deleteCar(int id) {
-
+        Car c = getCar(id);
+        cars.remove(c);
     }
 
     private Car getCar(int id){
