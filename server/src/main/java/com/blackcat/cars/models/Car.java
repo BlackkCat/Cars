@@ -6,6 +6,13 @@ public class Car {
     private String brand;
     private String model;
 
+    public Car(int id, int numDoors, String brand, String model) {
+        this.id = id;
+        this.numDoors = numDoors;
+        this.brand = brand;
+        this.model = model;
+    }
+
     public int getId() {
         return id;
     }
