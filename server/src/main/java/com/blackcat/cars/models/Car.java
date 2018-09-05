@@ -7,10 +7,10 @@ public class Car {
     private String model;
 
     public Car(int id, int numDoors, String brand, String model) {
-        this.id = id;
-        this.numDoors = numDoors;
-        this.brand = brand;
-        this.model = model;
+        setId(id);
+        setNumDoors(numDoors);
+        setBrand(brand);
+        setModel(model);
     }
 
     public int getId() {
