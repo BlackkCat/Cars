@@ -13,7 +13,7 @@ public class InMemoryCarRepository implements CarRepository {
 
     @Override
     public void createCar(Car car) {
-
+        cars.add(car);
     }
 
     @Override
