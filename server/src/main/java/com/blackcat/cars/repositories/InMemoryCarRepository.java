@@ -18,7 +18,7 @@ public class InMemoryCarRepository implements CarRepository {
 
     @Override
     public List<Car> getAllCars() {
-        return null;
+        return cars;
     }
 
     @Override
