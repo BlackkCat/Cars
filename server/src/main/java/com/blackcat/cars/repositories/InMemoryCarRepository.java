@@ -8,6 +8,9 @@ import java.util.List;
 public class InMemoryCarRepository implements CarRepository {
     private List<Car> cars = new ArrayList<>();
 
+    public InMemoryCarRepository() {
+    }
+
     @Override
     public void createCar(Car car) {
 
