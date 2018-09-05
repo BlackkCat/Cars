@@ -35,4 +35,11 @@ public class InMemoryCarRepository implements CarRepository {
     public void deleteCar(int id) {
 
     }
+
+    private Car getCar(int id){
+        return cars.stream()
+                .filter(c -> c.getId() == id)
+                .findFirst()
+                .orElse(null);
+    }
 }
