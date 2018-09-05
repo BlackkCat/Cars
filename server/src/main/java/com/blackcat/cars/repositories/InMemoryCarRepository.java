@@ -2,9 +2,12 @@ package com.blackcat.cars.repositories;
 
 import com.blackcat.cars.models.Car;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class InMemoryCarRepository implements CarRepository {
+    private List<Car> cars = new ArrayList<>();
+
     @Override
     public void createCar(Car car) {
 
