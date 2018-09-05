@@ -1,7 +1,9 @@
-package com.blackcat.cars;
+package com.blackcat.cars.views.CarCreate;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import com.blackcat.cars.R;
 
 public class CarCreate extends AppCompatActivity {
 
