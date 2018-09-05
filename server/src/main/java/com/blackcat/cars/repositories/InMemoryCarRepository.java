@@ -28,7 +28,9 @@ public class InMemoryCarRepository implements CarRepository {
 
     @Override
     public void updateCar(int id, Car car) {
-
+        Car c = getCar(id);
+        int index = cars.indexOf(c);
+        cars.set(index, car);
     }
 
     @Override
