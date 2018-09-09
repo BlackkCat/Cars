@@ -7,6 +7,8 @@ import com.blackcat.cars.R;
 
 public class CarsListActivity extends AppCompatActivity {
 
+    public static final long IDENTIFIER = 49;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
