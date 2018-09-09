@@ -12,7 +12,7 @@ import com.blackcat.cars.R;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class CarCreateFragment extends Fragment {
+public class CarCreateFragment extends Fragment implements CarCreateContracts.View {
 
 
     public CarCreateFragment() {
@@ -27,4 +27,28 @@ public class CarCreateFragment extends Fragment {
         return inflater.inflate(R.layout.fragment_car_create, container, false);
     }
 
+    @Override
+    public void setPresenter(CarCreateContracts.Presenter presenter) {
+        
+    }
+
+    @Override
+    public void navigateToHome() {
+
+    }
+
+    @Override
+    public void showError(Throwable throwable) {
+
+    }
+
+    @Override
+    public void hideLoading() {
+
+    }
+
+    @Override
+    public void showLoading() {
+
+    }
 }
