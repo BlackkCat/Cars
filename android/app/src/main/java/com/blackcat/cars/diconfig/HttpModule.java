@@ -1,6 +1,8 @@
 package com.blackcat.cars.diconfig;
 
 import com.blackcat.cars.Constants;
+import com.blackcat.cars.http.HttpRequester;
+import com.blackcat.cars.http.OkHttpHttpRequester;
 
 import javax.inject.Named;
 

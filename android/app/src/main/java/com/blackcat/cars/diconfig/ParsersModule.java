@@ -1,6 +1,7 @@
 package com.blackcat.cars.diconfig;
 
 import com.blackcat.cars.models.Car;
+import com.blackcat.cars.parsers.GsonJsonParser;
 import com.google.gson.JsonParser;
 
 import dagger.Module;
