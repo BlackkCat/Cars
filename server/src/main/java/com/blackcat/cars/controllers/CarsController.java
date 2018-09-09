@@ -27,6 +27,11 @@ public class CarsController {
         return service.getAllCars();
     }
 
+    @GetMapping("/{id}")
+    public Car getCarById(@PathVariable int id){
+        return service.getCarById(id);
+    }
+
     public CarService getService() {
         return service;
     }
