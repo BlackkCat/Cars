@@ -1,6 +1,7 @@
 package com.blackcat.cars.services;
 
 import com.blackcat.cars.models.Car;
+import com.blackcat.cars.repositories.base.Repository;
 import com.blackcat.cars.services.base.CarsService;
 import com.blackcat.cars.validators.base.Validator;
 
@@ -25,7 +26,7 @@ public class HttpCarsService implements CarsService {
     }
 
     @Override
-    public Superhero getDetailsById(int id) throws Exception {
+    public Car getDetailsById(int id) throws Exception {
         return mCarsRepository.getById(id);
     }
 
