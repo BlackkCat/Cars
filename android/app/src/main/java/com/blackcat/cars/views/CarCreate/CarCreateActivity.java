@@ -5,7 +5,7 @@ import android.os.Bundle;
 
 import com.blackcat.cars.R;
 
-public class CarCreate extends AppCompatActivity {
+public class CarCreateActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
