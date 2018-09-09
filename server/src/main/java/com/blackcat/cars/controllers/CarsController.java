@@ -32,6 +32,11 @@ public class CarsController {
         return service.getCarById(id);
     }
 
+    @PutMapping("/{id}")
+    public void updateCar(@PathVariable int id, @RequestBody Car car){
+        service.updateCar(id, car);
+    }
+
     public CarService getService() {
         return service;
     }
