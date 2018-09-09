@@ -82,11 +82,10 @@ public abstract class BaseDrawerActivity extends DaggerAppCompatActivity {
 
     protected abstract long getIdentifier();
 
-
-
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_base_drawer);
+    protected void onStart() {
+        super.onStart();
+        setupDrawer();
     }
+
 }
