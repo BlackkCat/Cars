@@ -1,6 +1,8 @@
 package com.blackcat.cars.views.CarCreate;
 
+import com.blackcat.cars.async.base.SchedulerProvider;
 import com.blackcat.cars.models.Car;
+import com.blackcat.cars.services.base.CarsService;
 
 import javax.inject.Inject;
 
@@ -15,7 +17,7 @@ public class CarCreatePresenter implements  CarCreateContracts.Presenter{
     private CarCreateContracts.View mView;
 
     @Inject
-    public SuperheroCreatePresenter(
+    public CarCreatePresenter(
             CarsService carsService,
             SchedulerProvider schedulerProvider) {
         mCarsService = carsService;
