@@ -14,6 +14,10 @@ public abstract class BaseDrawerActivity extends DaggerAppCompatActivity {
     @BindView(R.id.drawer_toolbar)
     Toolbar mToolbar;
 
+    public BaseDrawerActivity(){
+        
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
