@@ -15,4 +15,14 @@ public class CarCreateActivity extends BaseDrawerActivity implements  CarCreateC
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_car_create);
     }
+
+    @Override
+    protected long getIdentifier() {
+        return IDENTIFIER;
+    }
+
+    @Override
+    public void navigateToHome() {
+
+    }
 }

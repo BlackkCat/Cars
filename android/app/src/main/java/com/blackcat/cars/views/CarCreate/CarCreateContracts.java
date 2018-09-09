@@ -1,5 +1,7 @@
 package com.blackcat.cars.views.CarCreate;
 
+import com.blackcat.cars.models.Car;
+
 public interface CarCreateContracts {
     interface View {
 
