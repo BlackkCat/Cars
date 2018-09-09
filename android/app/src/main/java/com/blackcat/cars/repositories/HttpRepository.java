@@ -1,8 +1,8 @@
 package com.blackcat.cars.repositories;
 
 import com.blackcat.cars.http.HttpRequester;
+import com.blackcat.cars.parsers.base.JsonParser;
 import com.blackcat.cars.repositories.base.Repository;
-import com.google.gson.JsonParser;
 
 import java.io.IOException;
 import java.util.List;
