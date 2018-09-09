@@ -3,7 +3,11 @@ package com.blackcat.cars.views;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class BaseDrawerActivity extends AppCompatActivity {
+import com.blackcat.cars.R;
+
+import dagger.android.support.DaggerAppCompatActivity;
+
+public abstract class BaseDrawerActivity extends DaggerAppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
