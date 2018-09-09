@@ -45,6 +45,12 @@ public class CarCreateFragment extends Fragment implements CarCreateContracts.Vi
     }
 
     @Override
+    public void onResume() {
+        super.onResume();
+        mPresenter.subscribe(this);
+    }
+
+    @Override
     public void setPresenter(CarCreateContracts.Presenter presenter) {
         mPresenter = presenter;
     }
