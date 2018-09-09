@@ -45,7 +45,7 @@ public class CarCreateFragment extends Fragment implements CarCreateContracts.Vi
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_superhero_create, container, false);
+        View view = inflater.inflate(R.layout.fragment_car_create, container, false);
         ButterKnife.bind(this, view);
         return view;
     }
@@ -63,7 +63,7 @@ public class CarCreateFragment extends Fragment implements CarCreateContracts.Vi
     }
 
     @OnClick(R.id.btn_save)
-    public void onSuperheroSaveClicked() {
+    public void onCarSaveClicked() {
         int numDoors = Integer.parseInt(mNumDoors.getText().toString());
         String brand = mBrand.getText().toString();
         String model = mModel.getText().toString();

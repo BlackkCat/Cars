@@ -1,8 +1,8 @@
 package com.blackcat.cars.views.CarsList;
 
 
+import android.app.Fragment;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -89,7 +89,7 @@ public class CarsListFragment
     @Override
     public void showEmptyCarsList() {
         Toast.makeText(getContext(),
-                "No superheroes",
+                "No cars",
                 Toast.LENGTH_LONG)
                 .show();
     }
@@ -113,7 +113,7 @@ public class CarsListFragment
     }
 
     @Override
-    public void showSuperheroDetails(Car car) {
+    public void showCarDetails(Car car) {
         mNavigator.navigateWith(car);
     }
 

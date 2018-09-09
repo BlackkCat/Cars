@@ -9,6 +9,7 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.blackcat.cars.R;
 import com.blackcat.cars.models.Car;
 import com.squareup.picasso.Picasso;
 
@@ -93,8 +94,8 @@ public class CarsAdapter extends RecyclerView.Adapter<CarsAdapter.CarViewHolder>
             mBrand.setText(car.getBrand());
             mModel.setText(car.getModel());
 //            Picasso.get()
-//                    .load(superhero.getImageUrl())
-//                    .into(mSuperheroImageView);
+//                    .load(car.getImageUrl())
+//                    .into(mCarImageView);
             mCar = car;
         }
 

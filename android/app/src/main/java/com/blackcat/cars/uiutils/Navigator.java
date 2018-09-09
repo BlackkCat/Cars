@@ -1,6 +1,6 @@
 package com.blackcat.cars.uiutils;
 
 public interface Navigator {
-    void navigateWith(String superhero);
+    void navigateWith(String car);
 }
 

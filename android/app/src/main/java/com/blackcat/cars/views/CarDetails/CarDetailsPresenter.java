@@ -12,7 +12,7 @@ import io.reactivex.disposables.Disposable;
 
 public class CarDetailsPresenter
         implements CarDetailsContracts.Presenter {
-    private final CarsService mSuperheroesService;
+    private final CarsService mCarsService;
     private final SchedulerProvider mSchedulerProvider;
 
     private CarDetailsContracts.View mView;
@@ -20,10 +20,10 @@ public class CarDetailsPresenter
 
     @Inject
     public CarDetailsPresenter(
-            CarsService superheroesService,
+            CarsService carsService,
             SchedulerProvider schedulerProvider
     ) {
-        mSuperheroesService = superheroesService;
+        mCarsService = carsService;
         mSchedulerProvider = schedulerProvider;
     }
 
@@ -37,7 +37,7 @@ public class CarDetailsPresenter
         mView.showLoading();
         Disposable observable = Observable
                 .create((ObservableOnSubscribe<Car>) emitter -> {
-                    Car car = mSuperheroesService.getDetailsById(mCarId);
+                    Car car = mCarsService.getDetailsById(mCarId);
                     emitter.onNext(car);
                     emitter.onComplete();
                 })

@@ -13,18 +13,18 @@ public abstract class ActivityBindingModule {
     @ContributesAndroidInjector(
             modules = CarsListModule.class
     )
-    abstract CarsListActivity superheroesListActivity();
+    abstract CarsListActivity carsListActivity();
 
     @ActivityScoped
     @ContributesAndroidInjector(
             modules = CarDetailsModule.class
     )
-    abstract CarDetailsActivity superheroDetailsActivity();
+    abstract CarDetailsActivity carDetailsActivity();
 
     @ActivityScoped
     @ContributesAndroidInjector(
             modules = CarCreateModule.class
     )
-    abstract CarCreateActivity superheroCreateActivity();
+    abstract CarCreateActivity carCreateActivity();
 }
 

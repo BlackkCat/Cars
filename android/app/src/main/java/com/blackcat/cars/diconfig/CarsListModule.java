@@ -12,10 +12,10 @@ import dagger.android.ContributesAndroidInjector;
 public abstract class CarsListModule {
     @FragmentScoped
     @ContributesAndroidInjector
-    abstract CarsListFragment superheroesListFragment();
+    abstract CarsListFragment carsListFragment();
 
     @ActivityScoped
     @Binds
-    abstract CarsListContracts.Presenter superheroesListPresenter(CarsListPresenter presenter);
+    abstract CarsListContracts.Presenter carsListPresenter(CarsListPresenter presenter);
 }
 

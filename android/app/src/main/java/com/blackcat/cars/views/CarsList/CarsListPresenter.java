@@ -15,20 +15,20 @@ import io.reactivex.disposables.Disposable;
 public class CarsListPresenter
         implements CarsListContracts.Presenter {
 
-    private final CarsService mSuperheroesService;
+    private final CarsService mCarsService;
     private final SchedulerProvider mSchedulerProvider;
     private CarsListContracts.View mView;
 
     @Inject
     public CarsListPresenter(
-            CarsService superheroesService,
+            CarsService carsService,
             SchedulerProvider schedulerProvider) {
-        mSuperheroesService = superheroesService;
+        mCarsService = carsService;
         mSchedulerProvider = schedulerProvider;
     }
 
     @Override
-    // same as // setView(SuperheroesListContracts.View view)
+    // same as // setView(CarsListContracts.View view)
     public void subscribe(CarsListContracts.View view) {
         mView = view;
     }
@@ -38,8 +38,8 @@ public class CarsListPresenter
         mView.showLoading();
         Disposable observable = Observable
                 .create((ObservableOnSubscribe<List<Car>>) emitter -> {
-                    List<Car> superheroes = mSuperheroesService.getAllCars();
-                    emitter.onNext(superheroes);
+                    List<Car> cars = mCarsService.getAllCars();
+                    emitter.onNext(cars);
                     emitter.onComplete();
                 })
                 .subscribeOn(mSchedulerProvider.background())
@@ -56,8 +56,8 @@ public class CarsListPresenter
         mView.showLoading();
         Disposable observable = Observable
                 .create((ObservableOnSubscribe<List<Car>>) emitter -> {
-                    List<Car> superheroes = mSuperheroesService.getFilteredCars(pattern);
-                    emitter.onNext(superheroes);
+                    List<Car> cars = mCarsService.getFilteredCars(pattern);
+                    emitter.onNext(cars);
                     emitter.onComplete();
                 })
                 .subscribeOn(mSchedulerProvider.background())
@@ -70,15 +70,15 @@ public class CarsListPresenter
     }
 
     @Override
-    public void selectCar(Car superhero) {
-        mView.showCarDetails(superhero);
+    public void selectCar(Car car) {
+        mView.showCarDetails(car);
     }
 
-    private void presentCarsToView(List<Car> superheroes) {
-        if (superheroes.isEmpty()) {
+    private void presentCarsToView(List<Car> cars) {
+        if (cars.isEmpty()) {
             mView.showEmptyCarsList();
         } else {
-            mView.showCars(superheroes);
+            mView.showCars(cars);
         }
     }
 }

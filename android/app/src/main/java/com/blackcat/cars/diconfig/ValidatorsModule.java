@@ -13,7 +13,7 @@ import dagger.Provides;
 public class ValidatorsModule {
     @Provides
     @Singleton
-    public Validator<Car> superheroValidator() {
+    public Validator<Car> carValidator() {
         return new CarValidator();
     }
 }

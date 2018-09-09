@@ -28,22 +28,22 @@ public abstract class BaseDrawerActivity extends DaggerAppCompatActivity {
     }
 
     public void setupDrawer() {
-        PrimaryDrawerItem listSuperheroesItem = new PrimaryDrawerItem()
+        PrimaryDrawerItem listCarsItem = new PrimaryDrawerItem()
                 .withIdentifier(CarsListActivity.IDENTIFIER)
-                .withName("Superheroes");
+                .withName("Cars");
 
-        PrimaryDrawerItem createSuperheroItem = new PrimaryDrawerItem()
+        PrimaryDrawerItem createCarItem = new PrimaryDrawerItem()
                 .withIdentifier(CarCreateActivity.IDENTIFIER)
                 .withIcon(android.R.drawable.btn_plus)
-                .withName("Create superhero");
+                .withName("Create car");
 
         Drawer drawer = new DrawerBuilder()
                 .withActivity(this)
                 .withToolbar(mToolbar)
                 .addDrawerItems(
-                        listSuperheroesItem,
+                        listCarsItem,
                         new DividerDrawerItem(),
-                        createSuperheroItem
+                        createCarItem
                 )
                 .withOnDrawerItemClickListener(new Drawer.OnDrawerItemClickListener() {
                     @Override

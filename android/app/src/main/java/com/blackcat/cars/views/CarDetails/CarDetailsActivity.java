@@ -20,27 +20,27 @@ public class CarDetailsActivity extends BaseDrawerActivity {
     public static final String EXTRA_KEY = "CAR_EXTRA_KEY";
 
     @Inject
-    CarDetailsFragment mSuperheroDetailsFragment;
+    CarDetailsFragment mCarDetailsFragment;
 
     @Inject
-    CarDetailsContracts.Presenter mSuperheroDetailsPresenter;
+    CarDetailsContracts.Presenter mCarDetailsPresenter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_superhero_details);
+        setContentView(R.layout.activity_car_details);
 
         ButterKnife.bind(this);
 
         Intent intent = getIntent();
         Car car = (Car) intent.getSerializableExtra(CarDetailsActivity.EXTRA_KEY);
 
-        mSuperheroDetailsPresenter.setCarId(car.getId());
-        mSuperheroDetailsFragment.setPresenter(mSuperheroDetailsPresenter);
+        mCarDetailsPresenter.setCarId(car.getId());
+        mCarDetailsFragment.setPresenter(mCarDetailsPresenter);
 
         getFragmentManager()
                 .beginTransaction()
-                .replace(R.id.content, mSuperheroDetailsFragment)
+                .replace(R.id.content, mCarDetailsFragment)
                 .commit();
     }
 

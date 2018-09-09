@@ -17,7 +17,7 @@ import dagger.Provides;
 public class RepositoriesModule {
     @Provides
     @Singleton
-    public Repository<Car> superheroRepository() {
+    public Repository<Car> carRepository() {
         Repository<Car> repository = new InMemoryRepository<>();
         List<Car> initialCars = Arrays.asList(
                 new Car(3, "Mercedes", "S63"),

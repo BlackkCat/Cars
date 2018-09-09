@@ -35,17 +35,17 @@ public class HttpCarsService implements CarsService {
         String patternToLower = pattern.toLowerCase();
 
         return getAllCars().stream()
-                .filter(superhero -> superhero.getBrand().toLowerCase().contains(patternToLower))
+                .filter(car -> car.getBrand().toLowerCase().contains(patternToLower))
                 .collect(Collectors.toList());
     }
 
     @Override
-    public Car createCar(Car superhero) throws Exception {
-        if (!mCarValidator.isValid(superhero)) {
-            throw new IllegalArgumentException("Superhero is invalid");
+    public Car createCar(Car car) throws Exception {
+        if (!mCarValidator.isValid(car)) {
+            throw new IllegalArgumentException("Car is invalid");
         }
 
-        return mCarsRepository.add(superhero);
+        return mCarsRepository.add(car);
     }
 }
 

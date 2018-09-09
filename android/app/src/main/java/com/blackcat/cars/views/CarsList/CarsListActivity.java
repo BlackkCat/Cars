@@ -36,7 +36,7 @@ public class CarsListActivity
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_superheroes_list);
+        setContentView(R.layout.activity_cars_list);
 
         ButterKnife.bind(this);
 
@@ -47,11 +47,11 @@ public class CarsListActivity
 
         FragmentTransaction transaction = getFragmentManager()
                 .beginTransaction()
-                .replace(R.id.content, mSuperheroesListFragment);
+                .replace(R.id.content, mCarsListFragment);
 
         if (!isPhone()) {
-            mSuperheroDetailsFragment.setPresenter(mSuperheroDetailsPresenter);
-            transaction.replace(R.id.content_details, mSuperheroDetailsFragment);
+            mCarDetailsFragment.setPresenter(mCarDetailsPresenter);
+            transaction.replace(R.id.content_details, mCarDetailsFragment);
         }
 
         transaction.commit();

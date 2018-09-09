@@ -19,6 +19,14 @@ public class Car implements Serializable {
         setModel(model);
     }
 
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
     public int getNumDoors() {
         return numDoors;
     }

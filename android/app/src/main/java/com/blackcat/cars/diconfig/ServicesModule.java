@@ -12,7 +12,7 @@ import dagger.Provides;
 @Module
 public class ServicesModule {
     @Provides
-    public CarsService superheroesService(Repository<Car> repository, Validator<Car> validator) {
+    public CarsService carsService(Repository<Car> repository, Validator<Car> validator) {
         return new HttpCarsService(repository, validator);
     }
 }
