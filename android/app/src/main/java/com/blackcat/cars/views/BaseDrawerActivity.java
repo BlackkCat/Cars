@@ -8,6 +8,7 @@ import android.view.View;
 
 import com.blackcat.cars.R;
 import com.blackcat.cars.views.CarCreate.CarCreateActivity;
+import com.blackcat.cars.views.CarsList.CarsListActivity;
 import com.mikepenz.materialdrawer.Drawer;
 import com.mikepenz.materialdrawer.DrawerBuilder;
 import com.mikepenz.materialdrawer.model.DividerDrawerItem;
@@ -28,7 +29,7 @@ public abstract class BaseDrawerActivity extends DaggerAppCompatActivity {
 
     public void setupDrawer() {
         PrimaryDrawerItem listSuperheroesItem = new PrimaryDrawerItem()
-                .withIdentifier(CarListActivity.IDENTIFIER)
+                .withIdentifier(CarsListActivity.IDENTIFIER)
                 .withName("Superheroes");
 
         PrimaryDrawerItem createSuperheroItem = new PrimaryDrawerItem()

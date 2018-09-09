@@ -4,8 +4,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import com.blackcat.cars.R;
+import com.blackcat.cars.views.BaseDrawerActivity;
 
-public class CarCreateActivity extends AppCompatActivity {
+public class CarCreateActivity extends BaseDrawerActivity implements  CarCreateContracts.Navigator {
 
     public static final long IDENTIFIER = 298;
 
