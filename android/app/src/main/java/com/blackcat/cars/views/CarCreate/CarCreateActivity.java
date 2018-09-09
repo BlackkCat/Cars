@@ -1,10 +1,12 @@
 package com.blackcat.cars.views.CarCreate;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import com.blackcat.cars.R;
 import com.blackcat.cars.views.BaseDrawerActivity;
+import com.blackcat.cars.views.CarsList.CarsListActivity;
 
 public class CarCreateActivity extends BaseDrawerActivity implements  CarCreateContracts.Navigator {
 
@@ -23,6 +25,8 @@ public class CarCreateActivity extends BaseDrawerActivity implements  CarCreateC
 
     @Override
     public void navigateToHome() {
-
+        Intent intent = new Intent(this, CarsListActivity.class);
+        startActivity(intent);
+        finish();
     }
 }
