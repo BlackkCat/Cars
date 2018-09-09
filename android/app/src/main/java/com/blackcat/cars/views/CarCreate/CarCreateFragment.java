@@ -10,7 +10,10 @@ import android.widget.EditText;
 
 import com.blackcat.cars.R;
 
+import javax.inject.Inject;
+
 import butterknife.BindView;
+import butterknife.ButterKnife;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -26,16 +29,19 @@ public class CarCreateFragment extends Fragment implements CarCreateContracts.Vi
     private CarCreateContracts.Navigator mNavigator;
 
 
+    @Inject
     public CarCreateFragment() {
         // Required empty public constructor
     }
 
 
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_car_create, container, false);
+        View view = inflater.inflate(R.layout.fragment_superhero_create, container, false);
+        ButterKnife.bind(this, view);
+        return view;
     }
 
     @Override
