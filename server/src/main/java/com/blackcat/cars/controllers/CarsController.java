@@ -37,6 +37,11 @@ public class CarsController {
         service.updateCar(id, car);
     }
 
+    @DeleteMapping("/{id}")
+    public void deleteCar(@PathVariable int id){
+        service.deleteCar(id);
+    }
+
     public CarService getService() {
         return service;
     }
