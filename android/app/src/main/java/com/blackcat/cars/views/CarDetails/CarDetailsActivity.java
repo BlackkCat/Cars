@@ -1,5 +1,6 @@
 package com.blackcat.cars.views.CarDetails;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -8,24 +9,44 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 
 import com.blackcat.cars.R;
+import com.blackcat.cars.models.Car;
+import com.blackcat.cars.views.BaseDrawerActivity;
 
-public class CarDetailsActivity extends AppCompatActivity {
+import javax.inject.Inject;
+
+import butterknife.ButterKnife;
+
+public class CarDetailsActivity extends BaseDrawerActivity {
+    public static final String EXTRA_KEY = "CAR_EXTRA_KEY";
+
+    @Inject
+    CarDetailsFragment mSuperheroDetailsFragment;
+
+    @Inject
+    CarDetailsContracts.Presenter mSuperheroDetailsPresenter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_car_details);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+        setContentView(R.layout.activity_superhero_details);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
+        ButterKnife.bind(this);
+
+        Intent intent = getIntent();
+        Car car = (Car) intent.getSerializableExtra(CarDetailsActivity.EXTRA_KEY);
+
+        mSuperheroDetailsPresenter.setCarId(car.getId());
+        mSuperheroDetailsFragment.setPresenter(mSuperheroDetailsPresenter);
+
+        getFragmentManager()
+                .beginTransaction()
+                .replace(R.id.content, mSuperheroDetailsFragment)
+                .commit();
     }
 
+    @Override
+    protected long getIdentifier() {
+        return 0;
+    }
 }
+
