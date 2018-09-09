@@ -62,4 +62,9 @@ public class CarCreateFragment extends Fragment implements CarCreateContracts.Vi
     public void showLoading() {
 
     }
+
+    public void setNavigator(CarCreateContracts.Navigator navigator) {
+        mNavigator = navigator;
+    }
+
 }
