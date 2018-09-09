@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import com.blackcat.cars.R;
 import com.blackcat.cars.models.Car;
@@ -26,11 +27,11 @@ public class CarDetailsFragment
 
     private CarDetailsContracts.Presenter mPresenter;
 
-    @BindView(R.id.et_brand)
-    EditText mBrand;
+    @BindView(R.id.tv_brand)
+    TextView mBrand;
 
-    @BindView(R.id.et_model)
-    EditText mModel;
+    @BindView(R.id.tv_model)
+    TextView mModel;
 
     @Inject
     public CarDetailsFragment() {
