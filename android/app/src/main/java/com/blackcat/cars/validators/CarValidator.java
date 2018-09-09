@@ -1,7 +1,5 @@
 package com.blackcat.cars.validators;
 
-import android.provider.SyncStateContract;
-
 import com.blackcat.cars.Constants;
 import com.blackcat.cars.models.Car;
 import com.blackcat.cars.validators.base.Validator;

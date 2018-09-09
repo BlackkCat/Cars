@@ -6,12 +6,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
-import android.widget.ImageView;
-import android.widget.TextView;
 
 import com.blackcat.cars.R;
 import com.blackcat.cars.models.Car;
-import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -72,13 +69,10 @@ public class CarsAdapter extends RecyclerView.Adapter<CarsAdapter.CarViewHolder>
     }
 
     public static class CarViewHolder extends RecyclerView.ViewHolder {
-        @BindView(R.id.et_numDoors)
-        EditText mNumDoors;
-
-        @BindView(R.id.et_brand)
+        @BindView(R.id.tv_brand)
         EditText mBrand;
 
-        @BindView(R.id.et_model)
+        @BindView(R.id.tv_model)
         EditText mModel;
 
         private OnCarClickListener mOnClickListener;
@@ -90,7 +84,6 @@ public class CarsAdapter extends RecyclerView.Adapter<CarsAdapter.CarViewHolder>
         }
 
         void bind(Car car) {
-            mNumDoors.setText(car.getNumDoors());
             mBrand.setText(car.getBrand());
             mModel.setText(car.getModel());
 //            Picasso.get()

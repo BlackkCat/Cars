@@ -5,7 +5,6 @@ import java.io.Serializable;
 
 public class Car implements Serializable {
     public int id;
-    public int numDoors;
     public String brand;
     public String model;
 
@@ -13,8 +12,7 @@ public class Car implements Serializable {
 
     }
 
-    public Car(int numDoors, String brand, String model) {
-        setNumDoors(numDoors);
+    public Car(String brand, String model) {
         setBrand(brand);
         setModel(model);
     }
@@ -25,14 +23,6 @@ public class Car implements Serializable {
 
     public void setId(int id) {
         this.id = id;
-    }
-
-    public int getNumDoors() {
-        return numDoors;
-    }
-
-    public void setNumDoors(int numDoors) {
-        this.numDoors = numDoors;
     }
 
     public String getBrand() {

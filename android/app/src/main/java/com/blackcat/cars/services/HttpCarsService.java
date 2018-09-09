@@ -5,7 +5,6 @@ import com.blackcat.cars.repositories.base.Repository;
 import com.blackcat.cars.services.base.CarsService;
 import com.blackcat.cars.validators.base.Validator;
 
-import java.io.CharArrayReader;
 import java.util.List;
 import java.util.stream.Collectors;
 

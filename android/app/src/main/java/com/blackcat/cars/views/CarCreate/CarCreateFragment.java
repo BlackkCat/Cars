@@ -22,10 +22,7 @@ import butterknife.OnClick;
  */
 public class CarCreateFragment extends Fragment implements CarCreateContracts.View {
     private CarCreateContracts.Presenter mPresenter;
-//int numDoors, String brand, String model
-    @BindView(R.id.et_numDoors)
-    EditText mNumDoors;
-
+//String brand, String model
     @BindView(R.id.et_brand)
     EditText mBrand;
 
@@ -64,10 +61,9 @@ public class CarCreateFragment extends Fragment implements CarCreateContracts.Vi
 
     @OnClick(R.id.btn_save)
     public void onCarSaveClicked() {
-        int numDoors = Integer.parseInt(mNumDoors.getText().toString());
         String brand = mBrand.getText().toString();
         String model = mModel.getText().toString();
-        Car car = new Car(numDoors, brand, model);
+        Car car = new Car(brand, model);
         mPresenter.save(car);
     }
 

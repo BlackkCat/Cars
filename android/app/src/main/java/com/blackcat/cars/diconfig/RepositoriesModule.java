@@ -20,18 +20,18 @@ public class RepositoriesModule {
     public Repository<Car> carRepository() {
         Repository<Car> repository = new InMemoryRepository<>();
         List<Car> initialCars = Arrays.asList(
-                new Car(3, "Mercedes", "S63"),
-                new Car(3, "Mercedes", "GTS"),
-                new Car(3, "BMW", "i8"),
-                new Car(3, "BMW", "M6"),
-                new Car(5, "BMW", "760"),
-                new Car(5, "VW", "Touareg"),
-                new Car(5, "VW", "Arteon"),
-                new Car(5, "VW", "Multivan"),
-                new Car(5, "Mercedes", "G"),
-                new Car(5, "Mercedes", "S"),
-                new Car(5, "Mercedes", "E"),
-                new Car(5, "Mercedes", "C")
+                new Car("Mercedes", "S63"),
+                new Car("Mercedes", "GTS"),
+                new Car("BMW", "i8"),
+                new Car("BMW", "M6"),
+                new Car("BMW", "760"),
+                new Car("VW", "Touareg"),
+                new Car("VW", "Arteon"),
+                new Car("VW", "Multivan"),
+                new Car("Mercedes", "G"),
+                new Car("Mercedes", "S"),
+                new Car("Mercedes", "E"),
+                new Car("Mercedes", "C")
         );
 
         initialCars.forEach(s -> {

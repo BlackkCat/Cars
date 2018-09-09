@@ -7,7 +7,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
-import android.widget.TextView;
 
 import com.blackcat.cars.R;
 import com.blackcat.cars.models.Car;
@@ -26,9 +25,6 @@ public class CarDetailsFragment
         implements CarDetailsContracts.View {
 
     private CarDetailsContracts.Presenter mPresenter;
-
-    @BindView(R.id.et_numDoors)
-    EditText mNumDoors;
 
     @BindView(R.id.et_brand)
     EditText mBrand;
@@ -61,7 +57,6 @@ public class CarDetailsFragment
 
     @Override
     public void showCar(Car car) {
-        mNumDoors.setText(car.getNumDoors());
         mBrand.setText(car.getBrand());
         mModel.setText(car.getModel());
     }
