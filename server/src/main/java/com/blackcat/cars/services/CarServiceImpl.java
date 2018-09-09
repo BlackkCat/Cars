@@ -13,7 +13,7 @@ public class CarServiceImpl implements CarService {
 
     @Autowired
     public CarServiceImpl(CarRepository carRepository){
-        this.carRepository = carRepository;
+        setCarRepository(carRepository);
     }
 
     @Override
@@ -39,5 +39,13 @@ public class CarServiceImpl implements CarService {
     @Override
     public void deleteCar(int id) {
 
+    }
+
+    public CarRepository getCarRepository() {
+        return carRepository;
+    }
+
+    public void setCarRepository(CarRepository carRepository) {
+        this.carRepository = carRepository;
     }
 }
