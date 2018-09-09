@@ -1,13 +1,24 @@
 package com.blackcat.cars.services;
 
 import com.blackcat.cars.models.Car;
+import com.blackcat.cars.repositories.CarRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 public class CarServiceImpl implements CarService {
+    private CarRepository carRepository;
+
+    @Autowired
+    public CarServiceImpl(CarRepository carRepository){
+        this.carRepository = carRepository;
+    }
+
     @Override
     public void createCar(Car car) {
-        
+
     }
 
     @Override

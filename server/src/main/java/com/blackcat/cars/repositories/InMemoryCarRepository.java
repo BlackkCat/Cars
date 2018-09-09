@@ -1,10 +1,12 @@
 package com.blackcat.cars.repositories;
 
 import com.blackcat.cars.models.Car;
+import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
 import java.util.List;
 
+@Repository
 public class InMemoryCarRepository implements CarRepository {
     private List<Car> cars = new ArrayList<>();
 
