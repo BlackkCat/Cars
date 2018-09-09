@@ -9,23 +9,29 @@ import android.view.ViewGroup;
 import android.widget.EditText;
 
 import com.blackcat.cars.R;
+import com.blackcat.cars.models.Car;
 
 import javax.inject.Inject;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 /**
  * A simple {@link Fragment} subclass.
  */
 public class CarCreateFragment extends Fragment implements CarCreateContracts.View {
     private CarCreateContracts.Presenter mPresenter;
+//int numDoors, String brand, String model
+    @BindView(R.id.et_numDoors)
+    EditText mNumDoors;
 
-    @BindView(R.id.et_name)
-    EditText mNameEditText;
+    @BindView(R.id.et_brand)
+    EditText mBrand;
 
-    @BindView(R.id.et_secret_identity)
-    EditText mSecretIdentity;
+    @BindView(R.id.et_model)
+    EditText mModel;
+
     private CarCreateContracts.Navigator mNavigator;
 
 
@@ -55,6 +61,16 @@ public class CarCreateFragment extends Fragment implements CarCreateContracts.Vi
         super.onPause();
         mPresenter.unsubscribe();
     }
+
+    @OnClick(R.id.btn_save)
+    public void onSuperheroSaveClicked() {
+        int numDoors = Integer.parseInt(mNumDoors.getText().toString());
+        String brand = mBrand.getText().toString();
+        String model = mModel.getText().toString();
+        Car car = new Car(numDoors, brand, model);
+        mPresenter.save(car);
+    }
+
 
     @Override
     public void setPresenter(CarCreateContracts.Presenter presenter) {

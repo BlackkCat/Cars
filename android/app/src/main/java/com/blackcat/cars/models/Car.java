@@ -4,35 +4,43 @@ package com.blackcat.cars.models;
 import java.io.Serializable;
 
 public class Car implements Serializable {
-    public String imageUrl;
     public int id;
-    public String name;
-    public String secretIdentity;
+    public int numDoors;
+    public String brand;
+    public String model;
 
-    public Car() {
-        // public constructor is needed for parsing from/to JSON to work
+    public Car(){
+
     }
 
-    public Car(String name, String secretIdentity, String imageUrl) {
-        this.name = name;
-        this.secretIdentity = secretIdentity;
-        this.imageUrl = imageUrl;
+    public Car(int numDoors, String brand, String model) {
+        setNumDoors(numDoors);
+        setBrand(brand);
+        setModel(model);
     }
 
-    public String getName() {
-        return name;
+    public int getNumDoors() {
+        return numDoors;
     }
 
-    public String getSecretIdentity() {
-        return secretIdentity;
+    public void setNumDoors(int numDoors) {
+        this.numDoors = numDoors;
     }
 
-    public int getId() {
-        return id;
+    public String getBrand() {
+        return brand;
     }
 
-    public String getImageUrl() {
-        return imageUrl;
+    public void setBrand(String brand) {
+        this.brand = brand;
+    }
+
+    public String getModel() {
+        return model;
+    }
+
+    public void setModel(String model) {
+        this.model = model;
     }
 }
 
