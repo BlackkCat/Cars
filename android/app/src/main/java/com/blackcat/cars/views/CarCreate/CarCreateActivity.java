@@ -8,9 +8,17 @@ import com.blackcat.cars.R;
 import com.blackcat.cars.views.BaseDrawerActivity;
 import com.blackcat.cars.views.CarsList.CarsListActivity;
 
+import javax.inject.Inject;
+
 public class CarCreateActivity extends BaseDrawerActivity implements  CarCreateContracts.Navigator {
 
     public static final long IDENTIFIER = 298;
+
+    @Inject
+    CarCreateFragment mView;
+
+    @Inject
+    CarCreateContracts.Presenter mPresenter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
