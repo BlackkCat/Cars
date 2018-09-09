@@ -1,5 +1,6 @@
 package com.blackcat.cars.repositories;
 
+import com.blackcat.cars.http.HttpRequester;
 import com.blackcat.cars.repositories.base.Repository;
 import com.google.gson.JsonParser;
 
