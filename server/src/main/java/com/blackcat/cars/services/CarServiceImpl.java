@@ -18,27 +18,27 @@ public class CarServiceImpl implements CarService {
 
     @Override
     public void createCar(Car car) {
-
+        carRepository.createCar(car);
     }
 
     @Override
     public List<Car> getAllCars() {
-        return null;
+        return carRepository.getAllCars();
     }
 
     @Override
     public Car getCarById(int id) {
-        return null;
+        return carRepository.getCarById(id);
     }
 
     @Override
     public void updateCar(int id, Car car) {
-
+        carRepository.updateCar(id, car);
     }
 
     @Override
     public void deleteCar(int id) {
-
+        carRepository.deleteCar(id);
     }
 
     public CarRepository getCarRepository() {
