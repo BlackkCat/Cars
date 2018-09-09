@@ -68,6 +68,21 @@ public abstract class BaseDrawerActivity extends DaggerAppCompatActivity {
                 .build();
     }
 
+    private Intent getNextIntent(long identifier) {
+        if (identifier == CarCreateActivity.IDENTIFIER) {
+            return new Intent(this, CarCreateActivity.class);
+        }
+
+        return null;
+    }
+
+    public Toolbar getToolbar() {
+        return mToolbar;
+    }
+
+    protected abstract long getIdentifier();
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
