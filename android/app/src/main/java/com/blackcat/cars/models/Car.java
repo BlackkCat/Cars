@@ -13,6 +13,7 @@ public class Car implements Serializable {
     }
 
     public Car(String brand, String model) {
+        setId(1 + (int)(Math.random() * 100));
         setBrand(brand);
         setModel(model);
     }

@@ -14,13 +14,13 @@
             android:id="@+id/et_brand"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Enter name" />
+            android:hint="Enter model" />
 
         <EditText
             android:id="@+id/et_model"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Enter secret identity" />
+            android:hint="Enter brand" />
 
         <Button
             android:id="@+id/btn_save"

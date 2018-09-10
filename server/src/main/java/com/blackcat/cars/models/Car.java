@@ -18,7 +18,7 @@ public class Car {
     }
 
     public Car(int id, String brand, String model) {
-        setId(id);
+        setId(1 + (int)(Math.random() * 100));
         setBrand(brand);
         setModel(model);
     }
