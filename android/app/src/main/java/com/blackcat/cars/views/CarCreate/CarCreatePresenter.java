@@ -40,7 +40,7 @@ public class CarCreatePresenter implements  CarCreateContracts.Presenter{
         Disposable disposable = Observable
                 .create((ObservableOnSubscribe<Car>) emitter -> {
                     Car createdCar = mCarsService.createCar(car);
-                    emitter.onNext(createdCar);
+                    emitter.onNext(car);
                     emitter.onComplete();
                 })
                 .subscribeOn(mSchedulerProvider.background())

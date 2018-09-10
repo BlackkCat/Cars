@@ -11,6 +11,7 @@ public class InMemoryCarRepository implements CarRepository {
     private List<Car> cars = new ArrayList<>();
 
     public InMemoryCarRepository() {
+        cars.add(new Car(11,"aaaa", "bbbbbb"));
     }
 
     @Override

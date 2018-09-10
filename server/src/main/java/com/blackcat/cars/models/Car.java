@@ -1,14 +1,18 @@
 package com.blackcat.cars.models;
 
+import javax.annotation.Generated;
+
 public class Car {
     private int id;
-    private int numDoors;
     private String brand;
     private String model;
 
-    public Car(int id, int numDoors, String brand, String model) {
+    public Car(){
+        
+    }
+
+    public Car(int id, String brand, String model) {
         setId(id);
-        setNumDoors(numDoors);
         setBrand(brand);
         setModel(model);
     }
@@ -19,14 +23,6 @@ public class Car {
 
     public void setId(int id) {
         this.id = id;
-    }
-
-    public int getNumDoors() {
-        return numDoors;
-    }
-
-    public void setNumDoors(int numDoors) {
-        this.numDoors = numDoors;
     }
 
     public String getBrand() {

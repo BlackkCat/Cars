@@ -1,5 +1,8 @@
 package com.blackcat.cars.repositories;
 
+import android.util.Log;
+import android.widget.Toast;
+
 import com.blackcat.cars.http.HttpRequester;
 import com.blackcat.cars.parsers.base.JsonParser;
 import com.blackcat.cars.repositories.base.Repository;
@@ -32,7 +35,7 @@ public class HttpRepository<T> implements Repository<T> {
     @Override
     public T add(T item) throws IOException {
         String requestBody = mJsonParser.toJson(item);
-        String responseBody = mHttpRequester.post(mServerUrl, requestBody);
+        String responseBody = mHttpRequester.post(mServerUrl + "/new", requestBody);
         return mJsonParser.fromJson(responseBody);
     }
 
